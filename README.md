@@ -1,7 +1,7 @@
 # Content Hub Blog Site Sample
 This is a [Next.JS](https://nextjs.org) sample blog site that uses Sitecore Content Hub's CMP module for it's content.
 
-It will pull in all Blogs that are in the Ready 
+By default, it will display all blogs that have been published to the delivery service ([Experience Edge](https://docs.stylelabs.com/contenthub/4.2.x/content/user-documentation/experience-edge/caas-intro.html)).
 
 An example is deployed at https://content-hub-blog-site-sample.vercel.app.
 
