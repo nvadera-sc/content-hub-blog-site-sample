@@ -25,7 +25,8 @@ export default function Layout({ children, home }) {
               className={utilStyles.borderCircle}
               height={1170}
               width={2048}
-              layout="responsive"
+              style={{ width: '100%', height: 'auto' }}
+              sizes="100vw"
               alt={siteTitle}
             />
             <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
@@ -33,21 +34,17 @@ export default function Layout({ children, home }) {
         ) : (
           <>
             <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/logo.png"
-                  className={utilStyles.borderCircle}
-                  height={117}
-                  width={205}
-                  alt={siteTitle}
-                />
-              </a>
+              <Image
+                priority
+                src="/images/logo.png"
+                className={utilStyles.borderCircle}
+                height={117}
+                width={205}
+                alt={siteTitle}
+              />
             </Link>
             <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{siteTitle}</a>
-              </Link>
+              <Link href="/" className={utilStyles.colorInherit}>{siteTitle}</Link>
             </h2>
           </>
         )}
@@ -55,9 +52,7 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+          <Link href="/">← Back to home</Link>
         </div>
       )}
     </div>
